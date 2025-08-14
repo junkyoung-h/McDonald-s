@@ -1,4 +1,4 @@
-# 🍔 McDonald's Clone PWA
+# 🍔 McDonald's Renewal PWA
 
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Deployed-brightgreen?logo=github)](https://USERNAME.github.io/REPO_NAME)
 [![PWA Supported](https://img.shields.io/badge/PWA-Installable-blue?logo=googlechrome)](https://web.dev/progressive-web-apps/)

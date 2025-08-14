@@ -1,0 +1,208 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 변수 재사용을 위한 기본 세팅 */
+:root {
+  --primary-color: #e40614;
+  --gray-color: #999;
+  --text-color: #333;
+  --link-color: rgb(0, 102, 255);
+  --font-family: 'GmarketSansMedium', sans-serif;
+  --base-font-size: clamp(14px, 1.5vw, 18px);
+}
+
+html {
+  font-size: var(--base-font-size);
+}
+
+body {
+  font: normal 1.125rem/1.5 var(--font-family);
+  color: var(--text-color);
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h2 {
+  color: #000;
+  font-size: 1.56rem; /* 25px → 1.56rem */
+  font-weight: 700;
+  margin: 1.875rem 0 1.25rem 0; /* 30px 0 20px 0 */
+}
+
+/* header */
+header {
+  background-color: var(--primary-color);
+  padding: 10px 20px;
+}
+
+#head {
+  position: relative;
+  height: 80px;
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.myMc {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 56px;
+  height: 56px;
+}
+
+/* main */
+main {
+  margin: 1.25rem;/* 20px */
+  text-align: center;
+  margin-bottom: 25%;
+}
+
+#search {
+  margin-bottom: 1.25rem; /* 20px */
+  padding-left: 1.25rem; /* 20px */
+}
+
+#search input {
+  width: 85%;
+  height: 2.19rem; /* 35px */
+  font-size: 0.94rem; /* 15px */
+  text-align: center;
+  border: none;
+  background-color: #ededed;
+  color: #bcbcbc;
+  border-radius: 1.56rem; /* 25px */
+  float: left;
+  outline: none;
+}
+
+#search a {
+  display: inline-block;
+  padding-top: 0.5rem; /* 8px */
+}
+
+#search a i {
+  color: #9d9d9d;
+}
+
+/* topBanner */
+/* ────────────────────────────────── */
+/* TOP BANNER 슬라이드 공통 스타일 */
+.topBanner {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.topBanner .banner-wrapper {
+  display: flex;
+  width: 300%;                /* 3장 이미지 → 300% */
+  animation: slide 6s infinite;
+}
+
+.topBanner .banner-wrapper > a {
+  flex: 0 0 33.3333%;         /* 1/3씩만 차지 */
+}
+
+.topBanner .banner-wrapper img {
+  display: block;
+  width: 100%;                /* 자식 img는 부모(a) 너비 100% */
+  height: auto;
+  object-fit: cover;
+}
+
+@keyframes slide {
+  /* 0%: 첫 장 / 33.333%: 둘째장 / 66.666%: 셋째장 / 100%: 다시 첫 장 */
+  0%,      33.333%   { transform: translateX(0); }
+  33.333%, 66.666%   { transform: translateX(-33.3333%); }
+  66.666%, 100%     { transform: translateX(-66.6666%); }
+}
+
+
+
+/* coupon */
+.coupon h2 > a {
+  float: right;
+}
+
+.couponList {
+  display: flex;
+  justify-content: space-around;
+}
+
+.couponList li {
+  width: 30%;
+  background:url(../img/couponbg_xs.png) no-repeat center top;
+  padding: 1rem 1rem;
+}
+
+.couponList li a {
+  text-align: center;
+}
+
+.couponList li a span {
+  display: inline-block;
+  font-size: 0.75rem; /* 12px */
+  color: #b4b4b4;
+  padding-top: 0.5rem;
+}
+
+.new {
+  clear: both;
+}
+
+.new img {
+  width: 100%;
+}
+
+/* 320px 이하 대응 */
+@media (max-width: 320px) {
+  body {
+    font-size: 14px; /* 고정 작게 조정 */
+  }
+  h2 {
+    font-size: 1.2rem; /* 조금 작게 */
+    margin: 1rem 0 0.75rem 0;
+  }
+  header {
+    padding: 0.5rem 1rem;
+  }
+  #search {
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+  }
+  #search input {
+    height: 2rem;
+    font-size: 0.8rem;
+    border-radius: 1.25rem;
+  }
+  .topBanner {
+    height: 7.5rem;
+  }
+  .couponList {
+    flex-wrap: wrap;
+  }
+
+  .couponList li {
+    width: 48%;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+  }
+}

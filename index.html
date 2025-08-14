@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="맥도날드와 함께하는 식사시간의 즐거움">
+  <meta name="keywords"
+    content="햄버거, 프로모션, 쿠폰, 인기메뉴, McDonald's, McDrive, McDelivery, McMorning, Happy Meal, Signature Burger, McAllday, McCafe">
+  <title>McDonald's - 햄버거는 역시 맥도날드!</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="canonical" href="https://www.mcdonalds.co.kr/">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js" defer></script>
+  <script src="js/index.js" defer></script>
+  <script src="js/nav.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <div id="head">
+      <a href="coupon.html" class="myMc">
+        <img src="img/My_Mc.png" alt="qrcode">
+      </a>
+
+      <a href="index.html" class="logo">
+        <img src="img/logo.png" alt="logo">
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <div id="search">
+      <input type="text" placeholder="홍준경님 오늘 밀크쉐이크 어떠세요?">
+      <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+    </div>
+
+    <section class="topBanner">
+      <h2 style="display: none;">COUPON</h2>
+      <div class="banner-wrapper">
+        <a href="#"><img src="img/banner1.webp" alt="promotion"></a>
+        <a href="#"><img src="img/banner1-2.webp" alt="recruit"></a>
+        <a href="#"><img src="img/banner1-3.webp" alt="recruit"></a>
+      </div>
+    </section>
+
+    <section class="coupon">
+      <h2>COUPON
+        <a href="coupon.html"><i class="fa-solid fa-angle-right"></i></a>
+      </h2>
+      <ul class="couponList">
+        <li><a href="#"><img src="img/슈비버거.webp" alt="슈비버거"><span>2025-07-16 까지</span></a></li>
+        <li><a href="#"><img src="img/후렌치후라이.webp" alt="후렌치후라이"><span>2025-07-16 까지</span></a></li>
+        <li><a href="#"><img src="img/빅맥.webp" alt="빅맥"><span>2025-07-16 까지</span></a></li>
+      </ul>
+    </section>
+
+    <section class="new">
+      <h2>NEW</h2>
+      <ul class="newMenu">
+        <li><a href="#"><img src="img/banner2.webp" alt="1955 크리미 파마산"></a></li>
+        <li><a href="#"><img src="img/banner3.webp" alt="맥윙"></a></li>
+        <li><a href="#"><img src="img/banner4.webp" alt="베리스트로베리맥플러리"></a></li>
+      </ul>
+    </section>
+  </main>
+
+  <nav>
+    <ul>
+      <li id="toggleBtn"><a href="#"><img src="img/menu.png" alt="menu" class="grayLogo"></a></li>
+      <li><a href="index.html"><img src="img/home_color.png" alt="logo" class="navLogo"></a></li>
+      <li><a href="order.html"><img src="img/order.png" alt="order" class="grayLogo"></a></li>
+    </ul>
+  </nav>
+
+  <div id="menu_wrap">
+    <ul id="gnb">
+      <li>
+        <a href="#">마이페이지</a>
+        <ul class="submenu">
+          <li><a href="#">내 정보</a></li>
+          <li><a href="#">주문내역</a></li>
+        </ul>
+      </li>
+      <li><a href="#">메뉴소개</a></li>
+      <li><a href="#">이벤트</a></li>
+      <li><a href="#">매장찾기</a></li>
+      <li><a href="#">고객문의</a></li>
+      <li><a href="#">자주 묻는 질문</a></li>
+      <li>
+        <a href="#">약관 및 정책</a>
+        <ul class="submenu">
+          <li><a href="#">서비스 이용약관</a></li>
+          <li><a href="#">개인정보처리방침</a></li>
+        </ul>
+      </li>
+      <li><a href="#">국가/언어변경</a></li>
+    </ul>
+  </div>
+
+  <div id="overlay"></div>
+  <!-- 서비스 워커 등록 -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker
+        .register('./service_worker.js')
+        .then(function () {
+          console.log('서비스 워커가 등록됨!');
+        })
+    }
+  </script>
+
+</body>
+
+
+</html>

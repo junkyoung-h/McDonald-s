@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>주문하기 - McDonal's</title>
+  <meta name="description" content="맥도날드와 함께하는 식사시간의 즐거움">
+  <meta name="keywords"
+    content="햄버거, 프로모션, 쿠폰, 인기메뉴, McDonald's, McDrive, McDelivery, McMorning, Happy Meal, Signature Burger, McAllday, McCafe">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="canonical" href="https://www.mcdonalds.co.kr/">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/order.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <script src="js/order.js"></script>
+  <script src="js/nav.js"></script>
+</head>
+
+<body>
+  <header>
+    <div id="head">
+      <a href="#"><i class="fa-solid fa-circle-info"></i></a>
+      <h1><a href="order.html">주문</a></h1>
+      <div>
+        <a href="#"><i class="fa-solid fa-receipt"></i></a>
+        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="how">
+      <ul>
+        <li><a href="#">맥오더</a></li>
+        <li><a href="#">맥드라이브</a></li>
+        <li class="selected"><a href="#">맥딜리버리</a></li>
+      </ul>
+    </div><!-- how -->
+    <div class="where">
+      <img src="img/orderPlace.png" alt="orderPlace">
+      <p>의정부 GS DT<span>일반 메뉴 운영시간: 10:30 ~ 23:59</span></p>
+      <a href="#">매장변경하기</a>
+    </div><!-- where -->
+
+    <div id="what">
+      <ul class = "slide-menu">
+        <li class="selected"><a href="#recomend">추천메뉴</a></li>
+        <li><a href="#">버거 &amp; 세트</a></li>
+        <li><a href="#">맥카페 &amp; 음료 </a></li>
+        <li><a href="#">해피밀</a></li>
+        <li><a href="#">사이드 &amp; 디저트</a></li>
+      </ul>
+    </div><!-- what -->
+    <div id="recomend">
+      <ul id="menuList"></ul>
+      <script src="js/order_menu.js"></script>
+    </div>
+  </main>
+
+  <nav>
+    <ul>
+      <li id="toggleBtn"><a href="#"><img src="img/menu.png" alt="menu" class="grayLogo"></a></li>
+      <li><a href="index.html"><img src="img/home.png" alt="logo" class="navLogo"></a></li>
+      <li><a href="order.html"><img src="img/order_color.png" alt="order" class="grayLogo"></a></li>
+    </ul>
+  </nav>
+
+  <div id="menu_wrap">
+    <ul id="gnb">
+      <li class="click">
+        <a href="#">마이페이지</a>
+        <ul class="submenu">
+          <li><a href="#">내 정보</a></li>
+          <li><a href="#">주문내역</a></li>
+        </ul>
+      </li>
+      <li><a href="#">메뉴소개</a></li>
+      <li><a href="#">이벤트</a></li>
+      <li><a href="#">매장찾기</a></li>
+      <li><a href="#">고객문의</a></li>
+      <li><a href="#">자주 묻는 질문</a></li>
+      <li><a href="#">약관 및 정책</a>
+        <ul class="submenu">
+          <li><a href="#">서비스 이용약관</a></li>
+          <li><a href="#">개인정보처리방침</a></li>
+        </ul>
+      </li>
+      <li><a href="#">국가/언어변경</a></li>
+    </ul>
+  </div> <!-- menu_wrap -->
+  <div id="overlay"></div>
+</body>
+
+</html>

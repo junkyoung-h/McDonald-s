@@ -1,0 +1,284 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* CSS 변수 */
+:root {
+  --primary-color: #E7BC31;
+  --gray-color: #999;
+  --text-color: #333;
+  --link-color: rgb(0, 102, 255);
+  --font-family: 'GmarketSansMedium', sans-serif;
+  --base-font-size: clamp(14px, 1.5vw, 18px);
+  --font-family:'GmarketSansMedium'
+}
+
+/* reset */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html {
+  font-size: var(--base-font-size);
+}
+
+body {
+  font: normal 1rem/1.5 var(--font-family);
+  color: var(--text-color);
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* header */
+header {
+  width: 100%;
+  padding: 1.875rem 1.25rem; /* 30px 20px */
+  box-shadow: 0 0.0625rem 0.1875rem rgba(0,0,0,0.3); /* 1px 3px */
+  box-sizing: border-box;
+}
+
+#head {
+  font-size: 1.6rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  
+}
+
+#head h1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#head a:last-child {
+  margin-left: 0.625rem; /* 10px */
+}
+
+/* main */
+main {
+  text-align: center;
+}
+
+/* .how 섹션 */
+.how {
+  border-bottom: 1px solid var(--gray-color);
+  padding: 1.25rem 0.625rem; /* 20px 10px */
+}
+
+.how ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.how li {
+  width: 6.25rem; /* 100px */
+  border: 1px solid var(--gray-color);
+  padding: 0.3125rem 0.625rem; /* 5px 10px */
+  border-radius: 50px;
+  margin-right: 0.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.how ul li a {
+  display: block;
+  white-space: nowrap;
+  font-size: 1rem;
+}
+
+.how ul li.selected {
+  color: #fff;
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+/* where 섹션 */
+.where {
+  border-bottom: 1px solid var(--gray-color);
+  width: 100%;
+  height: 6.25rem; /* 100px */
+  padding: 1.25rem 1.25rem;
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.where img {
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.where p {
+  font-size: 0.9rem;
+  text-align: left;
+  position: relative;
+  margin: 0;
+}
+
+.where span {
+  display: block;
+  white-space: nowrap;
+  font-size: 0.6rem;
+  color: #aaa;
+}
+
+.where a {
+  font-size: 0.7rem;
+  color: var(--link-color);
+  margin-left: auto;
+  text-decoration: underline;
+}
+
+/* #what 가로 스크롤 메뉴 */
+#what {
+  width: 100%;
+  padding: 1rem 0 0.5rem;
+  border-bottom: 1px solid var(--gray-color);
+  overflow: hidden;
+}
+
+#what .slide-menu {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+/* 스크롤바 스타일 */
+#what .slide-menu::-webkit-scrollbar {
+  cursor: pointer;
+  height: 0.5rem; /* 8px */
+  background-color: transparent;
+}
+
+#what .slide-menu li {
+  flex: 0 0 auto;
+  margin: 0 0.9375rem; /* 15px */
+}
+
+#what .slide-menu li a {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  white-space: nowrap;
+  font-size: 1rem;
+}
+
+#what .slide-menu li.selected a {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: #fff;
+}
+
+
+/* 메뉴 리스트 */
+#menuList {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  margin: 0 1.25rem;
+}
+
+#menuList li {
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  padding: 0.625rem 0; /* 10px 0 */
+  box-sizing: border-box;
+}
+
+#menuList li a {
+  display: flex;
+  align-items: flex-start;
+  text-decoration: none;
+  color: inherit;
+}
+
+#menuList li img {
+  width: 6.25rem; /* 100px */
+  height: 6.25rem; /* 100px */
+  object-fit: contain;
+  margin-right: 1.875rem; /* 30px */
+  flex-shrink: 0;
+}
+
+#menuList li div {
+  flex-grow: 1;
+  text-align: left;
+  margin-top: 1.25rem; /* 20px */
+}
+
+#menuList li h3 {
+  font-size: 0.9rem;
+  font-weight: normal;
+}
+
+#menuList li p {
+  margin: 0;
+}
+
+#menuList li p.title_eng {
+  font-size: 0.8rem;
+  color: #999;
+  margin-bottom: 1rem;
+}
+
+#menuList li p.prices {
+  float: left;
+  font-size: 0.8rem;
+  margin-right: 0.625rem; /* 10px */
+}
+
+/* 320px 이하 대응 */
+@media (max-width: 320px) {
+  #what {
+    max-width: 320px;
+    overflow-x: auto;
+    /* white-space: nowrap; */
+  }
+  #what .slide-menu {
+    display: flex; /* inline-flex → flex 변경 */
+    flex-wrap: nowrap;
+    padding: 0;
+  }
+  #what .slide-menu li {
+    /* margin-right: 0.2rem; */
+    flex: 1 0 30%;
+  }
+  #what .slide-menu li a {
+    white-space: nowrap;
+    word-break: normal;
+    padding: 0.2rem 0.4rem;
+    font-size: 0.9rem;
+  }
+  /* 스크롤바 숨기기 - 웹킷 기반 브라우저 (크롬, 사파리 등) */
+  #what::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* 파이어폭스용 스크롤바 숨기기 */
+  #what {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+  }
+}
